@@ -18,9 +18,9 @@ library(demography)
 library(gganimate)
 
 
-#________________________________________________
-### 2.- Base de datos (libreria demography)  ----
-#________________________________________________
+#_______________________________________________
+### 2.- Base de datos (libreria demography) ----
+#_______________________________________________
 
 frmort <- set.upperage(fr.mort, 100)
 # Create tibble
@@ -33,11 +33,11 @@ frmort <- tibble(
 
 head(frmort)
 
-#__________________________
-## 3.- Gráfico en ggplot2  ----
-#__________________________
+#_____________________________
+## 3.- GrÃ¡fico en ggplot2 ----
+#_____________________________
 
-#Gráfico oriinal
+#GrÃ¡fico original en ggplot2
 frmort %>%
   ggplot(aes(x = age, y = mortrate, group = year, col = year)) +
   geom_line() +
@@ -67,4 +67,4 @@ frmort %>%
 )
 
 #guardar GIF
-anim_save("C:/Users/aguzman/Desktop/ejemplo.gif", p,  width = 1500, height = 1500)
+anim_save("C:/Users/aguzman/Desktop/ejemplo.gif", p,  width = 1000, height = 500)
